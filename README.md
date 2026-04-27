@@ -1,56 +1,45 @@
 # 🌱 RoboFarm Idle
 
-RoboFarm Idle é um jogo incremental desenvolvido em **Java + Swing**, no qual o jogador administra uma pequena fazenda automatizada por robôs agrícolas.
+RoboFarm Idle é um jogo incremental desenvolvido em **Java + Swing**, com foco em Programação Orientada a Objetos.
 
-O jogador começa irrigando manualmente, produzindo alimentos, vendendo a produção e comprando upgrades para melhorar a eficiência da fazenda.
+O jogador administra uma fazenda automatizada, produz alimentos, vende a produção e compra upgrades para melhorar sua eficiência.
 
----
+## 🎮 Mecânica principal
 
-## 🎮 Sobre o jogo
-
-No início do jogo, o jogador possui:
+O jogador começa com poucos recursos:
 
 - Dinheiro: R$ 0
 - Produção: 0 kg
 - Água: 100 L
 - Energia: 100%
 
-A principal mecânica consiste em produzir alimentos por meio da irrigação, vender a produção e investir em melhorias.
+A cada ação, o jogador pode irrigar manualmente, produzir alimentos e vender a produção para comprar melhorias.
 
-Com o avanço do jogo, o jogador pode desbloquear automações como robôs irrigadores e tratores autônomos.
-
----
-
-## 🧠 Objetivo do projeto
-
-Este projeto tem como objetivo praticar conceitos fundamentais de desenvolvimento em Java, incluindo:
-
-- Programação Orientada a Objetos
-- Encapsulamento
-- Interfaces gráficas com Swing
-- Eventos com `ActionListener`
-- Atualização de interface com `JLabel`
-- Loop de jogo com `Timer`
-- Controle de estado do jogo
-- Organização em pacotes
-
----
+Com o tempo, a fazenda pode ser automatizada com robôs agrícolas.
 
 ## 🛠️ Tecnologias utilizadas
 
 - Java
 - Java Swing
 - IntelliJ IDEA
-- Git e GitHub
+- Git
+- GitHub
 
----
+## 📚 Conceitos aplicados
+
+- Programação Orientada a Objetos
+- Encapsulamento
+- Interfaces
+- Polimorfismo
+- Separação de responsabilidades
+- Eventos com `ActionListener`
+- Loop de jogo com `Timer`
+- Organização em pacotes
+- Formatação de dados com `DecimalFormat`
 
 ## 📁 Estrutura do projeto
 
 ```text
-robofarm/
-docs/
-└──RoboFarm.mmd
 src/
 └── robofarm/
     ├── Main.java
@@ -69,4 +58,4 @@ src/
     │       ├── StatusPanel.java
     │       └── LojaPanel.java
     └── util/
-        └── Formatador.javaw.java
+        └── Formatador.java
