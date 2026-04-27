@@ -1,0 +1,130 @@
+classDiagram
+    direction LR
+
+    class Main {
+        +main(String[] args) void
+    }
+
+    class GameWindow {
+        -Fazenda fazenda
+        -StatusPanel statusPanel
+        -LojaPanel lojaPanel
+        -GameLoop gameLoop
+        +GameWindow()
+        -atualizarTela() void
+    }
+
+    class GameLoop {
+        -Fazenda fazenda
+        -Runnable aoAtualizar
+        -Timer timer
+        +GameLoop(Fazenda fazenda, Runnable aoAtualizar)
+        +iniciar() void
+        +parar() void
+    }
+
+    class Fazenda {
+        -double dinheiro
+        -double producao
+        -int agua
+        -int aguaMaxima
+        -int energia
+        -int energiaMaxima
+        -double producaoPorClique
+        -double producaoPorSegundo
+        -int consumoAguaPorClique
+        +irrigarManual() void
+        +venderProducao() void
+        +produzirAutomaticamente() void
+        +recuperarRecursos() void
+        +podeIrrigar() boolean
+        +podeProduzirAutomaticamente() boolean
+        +gastarDinheiro(double valor) boolean
+        +adicionarProducaoPorClique(double valor) void
+        +adicionarProducaoPorSegundo(double valor) void
+        +aumentarAguaMaxima(int valor) void
+    }
+
+    class Upgrade {
+        <<interface>>
+        +getNome() String
+        +getCusto() double
+        +getDescricao() String
+        +podeComprar(Fazenda fazenda) boolean
+        +aplicar(Fazenda fazenda) void
+    }
+
+    class RegadorMelhorado {
+        +getNome() String
+        +getCusto() double
+        +getDescricao() String
+        +podeComprar(Fazenda fazenda) boolean
+        +aplicar(Fazenda fazenda) void
+    }
+
+    class ReservatorioMaior {
+        +getNome() String
+        +getCusto() double
+        +getDescricao() String
+        +podeComprar(Fazenda fazenda) boolean
+        +aplicar(Fazenda fazenda) void
+    }
+
+    class RoboIrrigador {
+        +getNome() String
+        +getCusto() double
+        +getDescricao() String
+        +podeComprar(Fazenda fazenda) boolean
+        +aplicar(Fazenda fazenda) void
+    }
+
+    class TratorAutonomo {
+        +getNome() String
+        +getCusto() double
+        +getDescricao() String
+        +podeComprar(Fazenda fazenda) boolean
+        +aplicar(Fazenda fazenda) void
+    }
+
+    class StatusPanel {
+        -JLabel lblDinheiro
+        -JLabel lblProducao
+        -JLabel lblAgua
+        -JLabel lblEnergia
+        -JLabel lblProducaoSegundo
+        +atualizar(Fazenda fazenda) void
+    }
+
+    class LojaPanel {
+        -List~Upgrade~ upgrades
+        +LojaPanel(Fazenda fazenda, Runnable aoComprar)
+        -criarBotaoUpgrade(Upgrade upgrade) JButton
+    }
+
+    class Formatador {
+        +formatarDinheiro(double valor) String
+        +formatarKg(double valor) String
+    }
+
+    Main --> GameWindow
+    GameWindow --> Fazenda
+    GameWindow --> GameLoop
+    GameWindow --> StatusPanel
+    GameWindow --> LojaPanel
+
+    GameLoop --> Fazenda
+    StatusPanel --> Fazenda
+    LojaPanel --> Fazenda
+    LojaPanel --> Upgrade
+
+    Upgrade <|.. RegadorMelhorado
+    Upgrade <|.. ReservatorioMaior
+    Upgrade <|.. RoboIrrigador
+    Upgrade <|.. TratorAutonomo
+
+    RegadorMelhorado --> Fazenda
+    ReservatorioMaior --> Fazenda
+    RoboIrrigador --> Fazenda
+    TratorAutonomo --> Fazenda
+
+    StatusPanel --> Formatador
