@@ -1,0 +1,26 @@
+# Java compiled class files
+*.class
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# JVM crash logs
+hs_err_pid*
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Linux
+*~
