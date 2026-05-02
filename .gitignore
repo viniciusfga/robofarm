@@ -1,5 +1,50 @@
+# =========================
+# Java / Build
+# =========================
+
+# Compiled class files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
 # Build output
 out/
 
-# Java compilation output
-*.class
+# JVM crash logs
+hs_err_pid*
+
+# =========================
+# IDEs
+# =========================
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# =========================
+# OS files
+# =========================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Linux
+*~
+
+# =========================
+# Misc
+# =========================
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp

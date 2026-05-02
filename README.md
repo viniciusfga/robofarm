@@ -14,7 +14,6 @@
   🌾 Produza • 💧 Irrigue • 🤖 Automatize • 💰 Venda • 🚜 Expanda
 </p>
 
----
 
 ## 📌 Sobre o projeto
 
@@ -31,8 +30,6 @@ O projeto foi criado com foco em estudo de:
 - Eventos gráficos com Swing
 - Loop de jogo com `Timer`
 - Separação de responsabilidades
-
----
 
 ## 🎮 Gameplay
 
@@ -54,7 +51,6 @@ A partir disso, pode:
 - Automatizar a produção
 - Expandir a capacidade da fazenda
 
----
 
 ## 🖼️ Interface inicial
 
