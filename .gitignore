@@ -1,20 +1,34 @@
-# Java compiled class files
+# =========================
+# Java / Build
+# =========================
+
+# Compiled class files
 *.class
 
-# Package Files
+# Package files
 *.jar
 *.war
 *.ear
 
+# Build output
+out/
+
 # JVM crash logs
 hs_err_pid*
+
+# =========================
+# IDEs
+# =========================
 
 # IntelliJ IDEA
 .idea/
 *.iml
 *.iws
 *.ipr
-out/
+
+# =========================
+# OS files
+# =========================
 
 # macOS
 .DS_Store
@@ -24,3 +38,13 @@ Thumbs.db
 
 # Linux
 *~
+
+# =========================
+# Misc
+# =========================
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
