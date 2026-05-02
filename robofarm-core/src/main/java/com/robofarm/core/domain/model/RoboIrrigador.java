@@ -1,4 +1,4 @@
-package robofarm.model;
+package main.java.com.robofarm.core.domain.model;
 
 public class RoboIrrigador implements Upgrade {
 

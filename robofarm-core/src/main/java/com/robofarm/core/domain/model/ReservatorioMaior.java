@@ -1,20 +1,20 @@
-package robofarm.model;
+package main.java.com.robofarm.core.domain.model;
 
-public class RegadorMelhorado implements Upgrade {
+public class ReservatorioMaior implements Upgrade {
 
     @Override
     public String getNome() {
-        return "Regador melhorado";
+        return "Reservatório maior";
     }
 
     @Override
     public double getCusto() {
-        return 10.0;
+        return 25.0;
     }
 
     @Override
     public String getDescricao() {
-        return "Aumenta a produção manual em +1 kg por clique.";
+        return "Aumenta a capacidade máxima de água em +100 L.";
     }
 
     @Override
@@ -25,7 +25,7 @@ public class RegadorMelhorado implements Upgrade {
     @Override
     public void aplicar(Fazenda fazenda) {
         if (fazenda.gastarDinheiro(getCusto())) {
-            fazenda.adicionarProducaoPorClique(1);
+            fazenda.aumentarAguaMaxima(100);
         }
     }
 }

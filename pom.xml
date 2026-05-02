@@ -1,0 +1,14 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.robofarm</groupId>
+    <artifactId>robofarm</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>robofarm-core</module>
+        <module>robofarm-javafx</module>
+        <module>robofarm-libgdx</module>
+    </modules>
+</project>
