@@ -18,9 +18,9 @@
 
 ## 📌 Sobre o projeto
 
-**RoboFarm Idle** é um jogo incremental no estilo *idle game*, desenvolvido em **Java com Swing**, no qual o jogador administra uma fazenda automatizada.
+**RoboFarm Idle** é um jogo incremental no estilo *idle game*, desenvolvido em **Java com Swing**, no qual o jogador administra uma farm automatizada.
 
-O jogador começa com poucos recursos e precisa produzir alimentos manualmente, vender a produção e investir em melhorias para automatizar a fazenda com robôs agrícolas.
+O jogador começa com poucos recursos e precisa produzir alimentos manualmente, vender a produção e investir em melhorias para automatizar a farm com robôs agrícolas.
 
 O projeto foi criado com foco em estudo de:
 
@@ -52,7 +52,7 @@ A partir disso, pode:
 - Vender a produção
 - Comprar upgrades
 - Automatizar a produção
-- Expandir a capacidade da fazenda
+- Expandir a capacidade da farm
 
 ---
 
