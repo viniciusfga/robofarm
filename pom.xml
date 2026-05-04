@@ -5,47 +5,64 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Identidade do projeto -->
     <groupId>com.robofarm</groupId>
     <artifactId>robofarm</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <!-- Tipo agregador -->
+    <version>1.0-SNAPSHOT</version> <!-- Mudei de 1.0.0 para 1.0-SNAPSHOT para bater com os filhos -->
     <packaging>pom</packaging>
 
-    <!-- Módulos -->
+    <name>RoboFarm - Project Root</name>
+
     <modules>
         <module>robofarm-domain</module>
         <module>robofarm-application</module>
-        <module>robofarm-swing</module>
-        <module>robofarm-javafx</module>
-        <module>robofarm-libgdx</module>
+        <module>robofarm-infrastructure</module> <!-- Corrigido: infrastructure -->
+
+        <module>interfaces-graficas/robofarm-swing</module>
+        <module>interfaces-graficas/robofarm-javafx</module>
+        <module>interfaces-graficas/robofarm-libgdx</module>
     </modules>
 
-    <!-- Configuração global -->
     <properties>
+        <java.version>21</java.version>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Esta versão deve ser a mesma do projeto pai acima -->
+        <robofarm.version>1.0-SNAPSHOT</robofarm.version>
     </properties>
 
-    <!-- Plugin padrão -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.robofarm</groupId>
+                <artifactId>robofarm-domain</artifactId>
+                <version>${robofarm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.robofarm</groupId>
+                <artifactId>robofarm-application</artifactId>
+                <version>${robofarm.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- Removi a tag <dependencies> que estava aqui, pois o PAI não depende dos FILHOS -->
+
     <build>
         <pluginManagement>
             <plugins>
-
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.11.0</version>
+                    <version>3.13.0</version>
                     <configuration>
                         <source>21</source>
                         <target>21</target>
+                        <parameters>true</parameters>
                     </configuration>
                 </plugin>
-
             </plugins>
         </pluginManagement>
     </build>
-
 </project>

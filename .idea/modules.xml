@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/robofarm.iml" filepath="$PROJECT_DIR$/.idea/robofarm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robofarm-application/robofarm-application.iml" filepath="$PROJECT_DIR$/robofarm-application/robofarm-application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robofarm-swing/robofarm-swing.iml" filepath="$PROJECT_DIR$/robofarm-swing/robofarm-swing.iml" />
     </modules>
   </component>
 </project>

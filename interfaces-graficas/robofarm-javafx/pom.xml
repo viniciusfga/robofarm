@@ -8,20 +8,31 @@
         <groupId>com.robofarm</groupId>
         <artifactId>robofarm</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>robofarm-application</artifactId>
+    <artifactId>robofarm-javafx</artifactId>
+
+    <properties>
+        <javafx.version>21.0.2</javafx.version>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.robofarm</groupId>
-            <artifactId>robofarm-domain</artifactId>
-            <!-- A versão é herdada do dependencyManagement do pai -->
+            <artifactId>robofarm-application</artifactId>
+        </dependency>
+
+        <!-- Dependências do JavaFX -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.robofarm</groupId>
-            <artifactId>robofarm-domain</artifactId>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
         </dependency>
     </dependencies>
 </project>

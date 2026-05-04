@@ -1,6 +1,6 @@
 package com.robofarm.domain.model.entity;
 
-public class Jogador {
+public class Player {
 
     private double dinheiro;
     private double producaoTotal;
